@@ -45,3 +45,16 @@ exec { "create database user" :
 	path => "/usr/bin",
 	require => Service["mysql"]
 }
+
+define file_line($file, $line) {
+    exec { "/bin/echo '${line}' >> '${file}'":
+        unless => "/bin/grep -qFx '${line}' '${file}'"
+    }
+}
+
+file_line { "production":
+    file => "/etc/default/tomcat7",
+    line => "JAVA_OPTS=\"\$JAVA_OPTS -Dbr.com.caelum.vraptor.environment=production\"",
+    require => Package["tomcat7"],
+    notify => Service["tomcat7"]
+}

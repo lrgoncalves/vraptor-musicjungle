@@ -1,1 +1,1 @@
-{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"/var/www/curso-alura/devops","disabled":false}}}
+{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"/var/www/curso-alura/vraptor-musicjungle","disabled":false},"/tmp/vagrant-puppet/manifests-a11d1078b1b1f2e3bdea27312f6ba513":{"owner":"root","guestpath":"/tmp/vagrant-puppet/manifests-a11d1078b1b1f2e3bdea27312f6ba513","hostpath":"/var/www/curso-alura/vraptor-musicjungle/manifests","disabled":false}}}
